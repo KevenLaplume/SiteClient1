@@ -1,0 +1,262 @@
+::-webkit-scrollbar {
+  width: 0px;
+  /* Largeur de la barre de défilement */
+}
+
+body {
+  background-image: linear-gradient(to top left,
+      rgb(75, 75, 75) 33%,
+      rgb(0, 0, 7) 66%);
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 16px;
+  margin-bottom: 40px;
+}
+
+/*HEADERS*/
+
+.logo {
+  background-image: url("Images/signal-2024-01-08-194605.jpeg");
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #070707d7;
+  border-radius: 5px;
+  margin-right: -100px;
+}
+
+.logo svg {
+  height: 33%;
+  width: 25%;
+  margin: 25px;
+}
+
+.nav {
+  background-color: #720505b7;
+  border-radius: 5px;
+  margin-right: 25px;
+  margin-top: 25px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 6px;
+  width: auto;
+  transition: flex-direction 0.5s ease;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: flex-direction 0.5s ease;
+  flex-wrap: nowrap;
+}
+
+.nav ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fdf9f9;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
+  display: block;
+  width: 100%;
+}
+
+.nav ul li:hover {
+  scale: 1.2;
+}
+
+.sep {
+  background-color: #720505b7;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: -6px;
+  color: #fdf9f9;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+}
+
+/*MAIN*/
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centrer horizontalement */
+  margin-top: 25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.text {
+  flex: 1 1 40%;
+  /* Largeur des divs */
+  background-color: rgba(12, 10, 1, 0.7);
+  border-radius: 1%;
+  padding: 25px;
+  margin: 35px;
+  font-size: 20px;
+  cursor: default;
+  height: auto;
+  box-shadow: 45px 10px 40px rgba(0, 0, 0, 0.7),
+    /* Ajoute une ombre portée */
+    0 0 10px rgb(187, 3, 3),
+    /* Ajoute une lueur jaune */
+    0 0 20px rgb(139, 2, 2);
+  border: 2px solid rgba(177, 34, 8, 0);
+  color: #f8f8f6;
+  /* Couleur du texte */
+}
+
+/* Ajustement pour les petits écrans */
+@media (max-width: 768px) {
+  .text {
+    flex: 1 1 85%;
+    /* Adapter la largeur pour les petits écrans */
+    margin: 10px;
+    /* Ajuster la marge pour les petits écrans */
+  }
+}
+
+
+/*FOOTER*/
+
+
+.bouton {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px 10px;
+  background-color: #720505b7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bouton a {
+  text-decoration: none;
+  color: #fdf9f9;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bouton:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #faf2f2;
+  font-size: 12px;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  body {
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    /* Ajustements pour la navigation sur les petits écrans */
+    position: static;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #720505b7;
+  }
+
+  .nav ul {
+    display: block;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .image-container img {
+    /* Ajustements pour les images sur les petits écrans */
+    width: 100%;
+    height: auto;
+  }
+
+  .bouton {
+    /* Ajustements pour le bouton sur les petits écrans */
+    position: static;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  .bouton a {
+    display: block;
+    width: 100%;
+  }
+
+  .copyright {
+    position: static;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .text {
+    width: 80%;
+    margin: 15px auto;
+  }
+
+  /* Ajoutez ici les autres ajustements nécessaires pour les éléments que vous avez mentionnés */
+  .sep h1 {
+    font-size: 14px;
+    margin: 10px;
+    overflow: hidden;
+  }
+}
